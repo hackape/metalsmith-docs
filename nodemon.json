@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "layouts/*",
+    "lib/*",
+    "assets/*",
+    "build.js"
+  ],
+  "ext": "js json pug hbs scss css"
+}

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title #{ sitename }
+    link(rel="stylesheet", href="/styles.css")
+    link(rel="stylesheet", href="/gitbook/style.css")
+    link(rel="stylesheet", href="/styles/expandable-chapters.css")
+    //- script.
+    //-   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+    //-   ':35729/livereload.js?snipver=1"></' + 'script>')
+  body
+    .book.with-summary
+      include sidebar.pug
+      .book-body
+        .body-inner
+          .book-header
+          .page-wrapper
+            .page-inner
+              section.normal.markdown-section.
+                !{ contents }
+
+    script(src="/scripts/gitbook.js")
+    script(src="/scripts/expandable-chapters.js")
+    script(src="https://unpkg.com/lunr/lunr.js")
+    script(src="/scripts/search.js")
